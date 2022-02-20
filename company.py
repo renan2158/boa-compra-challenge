@@ -1,9 +1,18 @@
+from product import product
 class company:
-    def __init__(self, name, fixed_value, km_value):
+    def __init__(self, name, fixed_value, km_value, heavy_load_fixed_value, lightweight_load_threshold):
         self.__km_value = name
         self.__fixed_value = fixed_value
         self.__km_value = km_value
+        self.__heavy_load_fixed_value = heavy_load_fixed_value
+        self.__lightweight_load_threshold = lightweight_load_threshold
     
+    def calculate_transportation_cost(self, product:product):
+        if self.__heavy_load_fixed_value is not None and product.get_weight() > self.__lightweight_load_threshold:
+            return self.__heavy_load_fixed_value + (product.get_weight() * product.get_distance() * self.__km_value)
+        else:
+            return self.__fixed_value + (product.get_weight() * product.get_distance() * self.__km_value)
+
     def set_name(self, name):
         self.__name = name
 
@@ -21,3 +30,15 @@ class company:
 
     def get_km_value(self):
         return self.__km_value
+    
+    def set_heavy_load_fixed_value(self, heavy_load_fixed_value):
+        self.__heavy_load_fixed_value = heavy_load_fixed_value
+
+    def get_heavy_load_fixed_value(self):
+        return self.__heavy_load_fixed_value
+    
+    def set_lightweight_load_threshold(self, lightweight_load_threshold):
+        self.__lightweight_load_threshold = lightweight_load_threshold
+
+    def get_lightweight_load_threshold(self):
+        return self.__lightweight_load_threshold
