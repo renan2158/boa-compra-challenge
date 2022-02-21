@@ -1,6 +1,6 @@
 class product:
     def __init__(self, name, distance, weight):
-        self.__weight = name
+        self.__name = name
         self.__distance = distance
         self.__weight = weight
     
