@@ -1,4 +1,6 @@
-# Transportation Budget Calculator
+<h1 align="center">
+  <strong>Transportation Budget Calculator</strong>
+</h1>
 
 <p align="center">
   <a href="https://rocketseat.com.br">
@@ -12,7 +14,7 @@
 </h4>
 
 <h1 align="center">
-  <strong>This app is responsible for calculating transportation cost of a product according to the given parameters.</strong>
+  <strong>This app is responsible for calculating the transportation cost of a product according to the given parameters.</strong>
 </h1>
 
 ### :fire: Development
