@@ -9,7 +9,7 @@ class company:
         self.__lightweight_load_threshold = lightweight_load_threshold
     
     def calculate_budget(self, product):
-        if self.__heavy_load_fixed_value is not None and product.get_weight() > self.__lightweight_load_threshold:
+        if self.__heavy_load_fixed_value is not None and self.__heavy_load_km_value is not None and product.get_weight() > self.__lightweight_load_threshold:
             return self.__heavy_load_fixed_value + (product.get_weight() * product.get_distance() * self.__heavy_load_km_value)
         else:
             return self.__fixed_value + (product.get_weight() * product.get_distance() * self.__km_value)
