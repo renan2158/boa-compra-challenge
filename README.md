@@ -19,7 +19,7 @@
 
 ### :fire: Development
 
-During the development, I used the concept of [Object Oriented Programming](https://www.python.org/) and the [Python]() language.
+During the development, I used the concept of [Object Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming#:~:text=Object%2Doriented%20programming%20(OOP),(often%20known%20as%20methods).) and the [Python](https://www.python.org/) language.
 
 ---
 
